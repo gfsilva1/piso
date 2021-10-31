@@ -1,0 +1,2 @@
+class Piso < ApplicationRecord
+end
