@@ -1,5 +1,8 @@
+
 <ul>
+  <%= image_tag("pisoramica_nav.jpg", width: 200) %>
   <% @pisos.each do |piso| %>
     <li><%= link_to piso.nome, piso_path(piso.id) %></li>
   <% end %>
+
 </ul>

@@ -17,8 +17,14 @@ class PisosController < ApplicationController
     redirect_to pisos_path
   end
 
-  def edit
-    @piso = Piso.find(params[:id])
+  private
+
+  def piso_params
+    params.require(:pisos).permit(:nome, :tamanho, :valor)
   end
+
+# def edit
+#    @piso = Piso.find(params[:id])
+#  end
 
 end
