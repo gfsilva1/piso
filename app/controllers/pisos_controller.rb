@@ -17,4 +17,8 @@ class PisosController < ApplicationController
     redirect_to pisos_path
   end
 
+  def edit
+    @piso = Piso.find(params[:id])
+  end
+
 end
