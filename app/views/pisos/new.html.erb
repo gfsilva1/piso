@@ -1,0 +1,17 @@
+<h1>Novo piso</h1>
+
+<form action="create" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <label for="nome">nome</label>
+  <input type="text" name="pisos[nome]">
+  <label for="tamanho">Tamanho</label>
+  <input type="text" name="pisos[tamanho]">
+  <label for="valor">valor</label>
+  <input type="text" name="pisos[valor]">
+  <input type="submit">
+
+</form>
+
+<%= link_to pisos_path do %>
+  <i class="fa fa-history"></i> Back to list
+<% end %>

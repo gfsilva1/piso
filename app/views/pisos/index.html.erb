@@ -1,7 +1,5 @@
 <ul>
   <% @pisos.each do |piso| %>
-    <li><%= piso.nome %></li>
+    <li><%= link_to piso.nome, piso_path(piso.id) %></li>
   <% end %>
 </ul>
-
- <%= link_to piso.title, piso_path(piso.id) %>

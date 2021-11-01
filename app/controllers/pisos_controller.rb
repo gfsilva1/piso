@@ -7,4 +7,14 @@ class PisosController < ApplicationController
     @piso = Piso.find(params[:id])
   end
 
+  def new
+    @piso = Piso.new
+  end
+
+  def create
+    piso = Piso.new(piso_params)
+    piso.save
+    redirect_to pisos_path
+  end
+
 end
