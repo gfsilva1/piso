@@ -1,8 +1,6 @@
-
-<ul>
-  <%= image_tag("pisoramica_nav.jpg", width: 200) %>
-  <% @pisos.each do |piso| %>
-    <li><%= link_to piso.nome, piso_path(piso.id) %></li>
-  <% end %>
-
-</ul>
+    <nav class="navMenu">
+      <a href="#"><% @pisos.each do |piso| %>
+      <%= link_to piso.nome, piso_path(piso.id) %>
+      <% end %> <i class="uil uil-arrow-right"></i></a></a>
+      <div class="dot"></div>
+    </nav>

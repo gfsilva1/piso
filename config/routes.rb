@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home', to: 'pisos#home'
   get 'pisos', to: 'pisos#index'
   get 'pisos/new', to: 'pisos#new'
   get 'pisos/:id' , to: 'pisos#show', as: :piso

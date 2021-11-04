@@ -1,4 +1,7 @@
 class PisosController < ApplicationController
+  def home
+  end
+
   def index
     @pisos = Piso.all
   end
