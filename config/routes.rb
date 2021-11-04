@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'home', to: 'pisos#home'
+  root :to => 'pisos#home'
+
   get 'pisos', to: 'pisos#index'
   get 'pisos/new', to: 'pisos#new'
   post 'pisos/', to: 'pisos#create'
