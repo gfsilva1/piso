@@ -1,20 +1,42 @@
 <div class="container">
 
   <div class="form">
-    <form action="create" method="post">
-      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-      <label for="nome">nome</label>
-      <input type="text" name="pisos[nome]">
-      <label for="tamanho">Tam</label>
-      <input type="text" name="pisos[tamanho]">
-      <label for="valor">valor</label>
-      <input type="text" name="pisos[valor]">
-      <input type="submit">
-    </form>
+              <%= simple_form_for @piso do |f| %>
+
+                <%=f.input :nome,
+                            required: true,
+                            autofocus: true,
+                            class: 'form-style border border-1 border-white rounded',
+                            placeholder: "Name" %>
+                <i class='input-icon uil uil-at'></i>
+
+                <%=f.input :tamanho,
+                            required: false,
+                            autofocus: true,
+                            class: 'form-style border border-1 border-white rounded',
+                            placeholder: "tamanho" %>
+                <i class='input-icon uil uil-at'></i>
+
+                <%=f.input :valor,
+                            required: true,
+                            autofocus: true,
+                            class: 'form-style border border-1 border-white rounded',
+                            placeholder: "Valor"%>
+                <i class='input-icon uil uil-at'></i>
+
+                <%= f.input :photo,
+                            as: :file,
+                            class: 'btn-sign mb-1 mt-3 rounded-3' %>
+
+                <div class="form-actions">
+                  <%= f.submit "Criar piso", class: 'btn-sign mb-1 mt-3 rounded-3' %>
+                </div>
+              <% end %>
   </div>
+
   <div>
     <%= link_to pisos_path do %>
-    <i class="fa fa-history"></i> Ver pisos
+    <i class="fa fa-history"> Ver pisos</i>
     <% end %>
   </div>
 </div>

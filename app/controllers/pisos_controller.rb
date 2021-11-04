@@ -15,8 +15,8 @@ class PisosController < ApplicationController
   end
 
   def create
-    piso = Piso.new(piso_params)
-    piso.save
+    @piso = Piso.new(piso_params)
+    @piso.save
     redirect_to pisos_path
   end
 
@@ -29,5 +29,8 @@ class PisosController < ApplicationController
 # def edit
 #    @piso = Piso.find(params[:id])
 #  end
+def piso_params
+  params.require(:piso).permit(:title, :body, :photo)
+end
 
 end

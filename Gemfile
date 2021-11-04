@@ -9,7 +9,7 @@ gem 'simple_form'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
-
+gem 'cloudinary', '~> 1.16.0'
 gem 'bootstrap', '~> 4.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
