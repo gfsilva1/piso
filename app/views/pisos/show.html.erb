@@ -2,3 +2,10 @@
 <%= @piso.nome %>
 <%= cl_image_tag @piso.photo.key, height: 300, width: 400, crop: :fill %>
 </h1>
+
+<h2>
+<%= link_to "Delete #{@piso.nome}",
+            piso_path(@piso),
+            method: :delete,
+            data: { confirm: "Tem certeza?" } %>
+</h2>
