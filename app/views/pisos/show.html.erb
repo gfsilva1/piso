@@ -8,16 +8,16 @@
         <p>R$<%= @piso.valor %></p>
     </div>
     <div class="product-price-btn">
-     <%= link_to  pisos_new_path(@piso) do %>
-     <button type="button" style="color:black">Comprar</button>
-     <% end %>
+     <a href="https://api.whatsapp.com/send?phone=+551599816-4773"  style="color:white">Comprar</a>
     </div>
     <div class="delete">
       <%= link_to "Delete #{@piso.nome}",
         piso_path(@piso),
         method: :delete,
         data: { confirm: "Tem certeza?" } %>
-
+    </div>
+    <div>
+     <%= link_to "Voltar", pisos_path %>
     </div>
   </div>
 </div>

@@ -15,7 +15,11 @@ body {
 }
 
 .navMenu {
-  position: absolute;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: flex-start;
+  padding-bottom: 200px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);

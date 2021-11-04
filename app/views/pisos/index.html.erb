@@ -1,6 +1,12 @@
+  <div class="container">
+    <div>
+    <h1>Lista de pisos</h1>
+    </div>
     <nav class="navMenu">
       <a href="#"><% @pisos.each do |piso| %>
       <%= link_to piso.nome, piso_path(piso.id) %>
       <% end %> <i class="uil uil-arrow-right"></i></a></a>
       <div class="dot"></div>
+      <div><%= link_to "Criar piso", pisos_new_path %></div>
     </nav>
+  </div>

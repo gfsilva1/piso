@@ -7,14 +7,14 @@
                             required: true,
                             autofocus: true,
                             class: 'form-style border border-1 border-white rounded',
-                            placeholder: "Name" %>
+                            placeholder: "Nome" %>
                 <i class='input-icon uil uil-at'></i>
 
                 <%=f.input :tamanho,
                             required: false,
                             autofocus: true,
                             class: 'form-style border border-1 border-white rounded',
-                            placeholder: "tamanho" %>
+                            placeholder: "Tamanho" %>
                 <i class='input-icon uil uil-at'></i>
 
                 <%=f.input :valor,
@@ -33,10 +33,8 @@
                 </div>
               <% end %>
   </div>
-
-  <div>
-    <%= link_to pisos_path do %>
-    <i class="fa fa-history"> Ver pisos</i>
-    <% end %>
+  <div class="navMenu" >
+    <%= link_to "Lista de pisos", pisos_path %>
   </div>
+
 </div>
