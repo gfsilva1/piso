@@ -6,18 +6,19 @@
     </div>
     <div class="price-flex" style="color:white">
         <p>R$<%= @piso.valor %></p>
+        <p><%= @piso.prazo %></p>
     </div>
     <div class="product-price-btn">
      <a href="https://api.whatsapp.com/send?phone=+551599816-4773"  style="color:white">Comprar</a>
     </div>
     <div class="delete">
-      <%= link_to "Delete #{@piso.nome}",
+      <%= link_to "Deletar #{@piso.nome}",
         piso_path(@piso),
         method: :delete,
         data: { confirm: "Tem certeza?" } %>
     </div>
-    <div>
-     <%= link_to "Voltar", pisos_path %>
+    <div style="text-decoration:none">
+      <%= link_to "Pag inicial", root_path %>
     </div>
   </div>
 </div>

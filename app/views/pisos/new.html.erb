@@ -1,4 +1,5 @@
 <div class="container">
+
   <div>
     <h1>Criar uma venda nova aqui</h1>
   </div>
@@ -26,6 +27,13 @@
                             placeholder: "Valor"%>
                 <i class='input-icon uil uil-at'></i>
 
+                <%=f.input :prazo,
+                            required: true,
+                            autofocus: true,
+                            class: 'form-style border border-1 border-white rounded',
+                            placeholder: "Valor"%>
+                <i class='input-icon uil uil-at'></i>
+
                 <%= f.input :photo,
                             as: :file,
                             class: 'btn-sign mb-1 mt-3 rounded-3' %>
@@ -36,7 +44,8 @@
               <% end %>
   </div>
   <div class="navMenu" >
-    <%= link_to "Lista de pisos", pisos_path %>
+    <%= link_to "Ver Lista", pisos_path %>
+    <%= link_to "Pag inicial", root_path %>
   </div>
 
 </div>

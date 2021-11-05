@@ -38,7 +38,7 @@ class PisosController < ApplicationController
 private
 
   def piso_params
-    params.require(:piso).permit(:nome, :tamanho, :valor, :photo)
+    params.require(:piso).permit(:nome, :tamanho, :valor, :prazo, :photo)
   end
 
 
