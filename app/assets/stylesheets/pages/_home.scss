@@ -164,6 +164,7 @@ a {
 .link-two:hover {
   color: white;
   transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+  text-decoration: none;
 }
 
 .link-two::before {
@@ -222,6 +223,12 @@ a {
 
 .link-three {
   color: white;
+  text-decoration: none;
+}
+
+.link-three:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .link-three::after {
@@ -235,6 +242,8 @@ a {
   transform: translate(0, -50%) scaleY(0);
   transition: transform 1s ease;
   mix-blend-mode: difference;
+  color: white;
+  text-decoration: none;
 
   clip-path: polygon(
     20% 60%,
@@ -252,6 +261,8 @@ a {
 
 .link-three:hover::after {
   transform: translate(0, 0%) scaleY(1);
+  color: white;
+  text-decoration: none;
 }
 
 .link-three::before {
@@ -282,4 +293,6 @@ a {
 
 .link-three:hover::before {
   transform: translate(0%, 0%) scaleY(1);
+  color: white;
+  text-decoration: none;
 }

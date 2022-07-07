@@ -8,17 +8,17 @@
         <p>R$<%= @piso.valor %></p>
         <p><%= @piso.prazo %>dias corridos</p>
     </div>
-    <div class="product-price-btn">
-     <a href="https://api.whatsapp.com/send?phone=+551599816-4773"  style="color:white">Comprar</a>
+    <div class="button-action">
+     <a href="https://api.whatsapp.com/send?phone=+551599816-4773">Comprar</a>
     </div>
-    <div class="delete">
+    <div class="button-action">
       <%= link_to "Deletar #{@piso.nome}",
         piso_path(@piso),
         method: :delete,
         data: { confirm: "Tem certeza?" } %>
     </div>
-    <div >
-      <h1><%= link_to "Pag inicial", root_path, class: "link"%></h1>
+    <div class="button-action">
+      <%= link_to "Pag inicial", root_path, class: "button-action"%>
     </div>
   </div>
 </div>

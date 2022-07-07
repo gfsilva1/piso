@@ -8,16 +8,16 @@
 }
 
 
-.delete {
+
+.button-action {
   a{
   text-decoration: none;
   color:white;
+  font-size: 20px;
   }
 }
 
-.link {
 
-  text-decoration: none;
-  color: white;
-
+.button-action a:hover {
+  color: #fddb3a;
 }

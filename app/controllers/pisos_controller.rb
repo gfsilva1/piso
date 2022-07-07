@@ -17,10 +17,8 @@ class PisosController < ApplicationController
   def create
     @piso = Piso.new(piso_params)
     @piso.save
-    redirect_to pisos_path(@piso)
+    redirect_to pisos_path
   end
-
-
 
   def edit
     @piso = Piso.find(params[:id])
