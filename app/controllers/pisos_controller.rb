@@ -3,7 +3,11 @@ class PisosController < ApplicationController
   end
 
   def index
-    @pisos = Piso.all
+    if params[:query].present?
+      @pisos = Piso.busca_piso(params[:query])
+    else
+      @pisos = Piso.all
+    end
   end
 
   def show
