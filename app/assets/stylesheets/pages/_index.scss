@@ -134,6 +134,7 @@ p.warning a.more:hover {
   /* The external spacing of the container. */
   overflow: hidden;
   /* Prevents .corner::before to be visible outside the margins of the container. */
+  margin-left: 200px;
 }
 
 .entry {
