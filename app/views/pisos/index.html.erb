@@ -1,102 +1,16 @@
-  <div class="container">
-    <div class="lista">
-      <h1>Lista de pisos</h1>
-      <%= form_tag pisos_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control mg-3",
-          placeholder: "Buscar piso"
-        %>
-        <%= submit_tag "Buscar", class: "btn btn-primary" %>
-        <%= link_to "Criar", pisos_new_path, class: "btn btn-success" %>
-      <% end %>
+<div class="lista">
+  <h1>Lista de pisos</h1>
+  <%= form_tag pisos_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control mg-3",
+      placeholder: "Buscar piso"
+    %>
+    <%= submit_tag "Buscar", class: "btn btn-primary" %>
+    <%= link_to "Criar", pisos_new_path, class: "btn btn-success" %>
+  <% end %>
 
-      <a href="#"><% @pisos.each do |piso| %>
-        <%= link_to piso.nome, piso_path(piso.id) %>
-      <% end %> <i class="uil uil-arrow-right"></i></a></a>
-    </div>
-  </div>
-
-  <div class="container">
-  <div class="entry">
-    <div class="entry-content" style="background-image: url(https://images.unsplash.com/photo-1551893478-d726eaf0442c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80)"></div>
-    <div class="corner-container">
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-    </div>
-  </div>
-   <div class="entry">
-    <div class="entry-content" style="background-image: url(https://images.unsplash.com/photo-1547414857-c9f61632b250?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)"></div>
-    <div class="corner-container">
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-    </div>
-  </div>
-  <div class="entry">
-    <div class="entry-content" style="background-image: url(https://images.unsplash.com/photo-1555181937-efe4e074a301?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80)"></div>
-    <div class="corner-container">
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-    </div>
-  </div>
-  <div class="entry">
-    <div class="entry-content" style="background-image: url(https://images.unsplash.com/photo-1622228862102-d691d3e2a334?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)"></div>
-    <div class="corner-container">
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-    </div>
-  </div>
-  <div class="entry">
-    <div class="entry-content" style="background-image: url(https://images.unsplash.com/photo-1517574012247-6941b83050d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=361&q=80)"></div>
-    <div class="corner-container">
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-    </div>
-  </div>
-  <div class="entry">
-    <div class="entry-content"  style="background-image: url(https://images.unsplash.com/photo-1603143555590-61dc716378e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)"></div>
-    <div class="corner-container">
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-    </div>
-  </div>
-  <div class="entry">
-    <div class="entry-content"  style="background-image: url(https://images.unsplash.com/photo-1573504816327-07f3bf7accac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80)"></div>
-    <div class="corner-container">
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-    </div>
-  </div>
-  <div class="entry">
-    <div class="entry-content" style="background-image: url(https://images.unsplash.com/photo-1517574012247-6941b83050d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=361&q=80)"></div>
-    <div class="corner-container">
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-    </div>
-  </div>
-  <div class="entry">
-    <div class="entry-content" style="background-image: url(https://images.unsplash.com/photo-1580398562556-d33329a0f29b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80)"></div>
-    <div class="corner-container">
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-      <span class="corner"></span>
-    </div>
-  </div>
+  <a href="#"><% @pisos.each do |piso| %>
+    <%= link_to piso.nome, piso_path(piso.id) %>
+  <% end %> <i class="uil uil-arrow-right"></i></a></a>
 </div>
