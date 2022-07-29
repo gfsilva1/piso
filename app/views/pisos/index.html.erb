@@ -1,4 +1,4 @@
-<div class="lista">
+<div class="lista" >
   <h1>Lista de pisos</h1>
   <%= form_tag pisos_path, method: :get do %>
     <%= text_field_tag :query,
@@ -10,7 +10,14 @@
     <%= link_to "Criar", pisos_new_path, class: "btn btn-success" %>
   <% end %>
 
-  <a href="#"><% @pisos.each do |piso| %>
-    <%= link_to piso.nome, piso_path(piso.id) %>
-  <% end %> <i class="uil uil-arrow-right"></i></a></a>
+
+  <% @pisos.each do |piso| %>
+      <div data-controller="hello">
+        <input type="checkbox" name="" id="">
+        <label for="">
+          <%= link_to piso.nome, piso_path(piso.id) %>
+        </label>
+      </div>
+    <% end %>
+
 </div>
