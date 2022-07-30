@@ -5,8 +5,10 @@ export default class extends Controller {
   connect() {
   }
   updateNavbar() {
-    if (window.scrollY >= window.innerHeight) {
+    if (window.scrollY >= 100) {
       this.element.classList.add("navbar-lewagon-white")
+      this.element.removeChild(this.element.lastElementChild)
+      const foto = document.createElement("img")
     } else {
       this.element.classList.remove("navbar-lewagon-white")
     }
